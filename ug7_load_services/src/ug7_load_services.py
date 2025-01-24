@@ -29,8 +29,6 @@ for row in range(sheet1.nrows):
         col = 0
         service_name = sheet1.cell_value(row, col)
         col += 1
-        service_desc = sheet1.cell_value(row, col)
-        col += 1
         service_dst_ports = sheet1.cell_value(row, col).split('\n')
         service_dst_ports_stripped = [s.strip() for s in service_dst_ports]
         for service_dst_port in service_dst_ports_stripped:
