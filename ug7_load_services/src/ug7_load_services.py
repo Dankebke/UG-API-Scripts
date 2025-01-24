@@ -19,7 +19,7 @@ all_services = server.v1.libraries.services.list(auth_token, 0, 1000, {}, [])
 for item in all_services["items"]:
     dict_services.update({item["name"]:item["id"]})
 
-file_path = os.path.join('Абсолютный', 'путь', 'до', 'создаваемого', 'файла.xls')
+file_path = os.path.join('Абсолютный', 'путь', 'до', 'файла.xls')
 book = xlrd.open_workbook(file_name)
 sheet1 = book.sheet_by_index(0)
 
