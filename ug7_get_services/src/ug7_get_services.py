@@ -24,20 +24,20 @@ sheet1 = wb.add_sheet('Services')
 style_2 = xlwt.easyxf('font: bold 1')
 sheet1.write(0,0,'Services',style_2)
 sheet1.write(0,1,'Ports',style_2)
-y = 1
+row = 1
 service_names = []
 for item in services['items']:
-    x = 0
+    col = 0
     protocol_arr = []
-    sheet1.write(y,x,item['name'],style_1)
-    x += 1
+    sheet1.write(row,col,item['name'],style_1)
+    col += 1
     for protocol in item['protocols']:
         protocol_type = protocol['proto'] + '/'
         protocol_port = protocol['port'] + '\n'
         protocol_arr.append(protocol_type + protocol_port)
     protocol_arr[-1] = protocol_arr[-1].replace('\n', '')
-    sheet1.write(y,x,protocol_arr,style_1)
-    y += 1
+    sheet1.write(row,col,protocol_arr,style_1)
+    row += 1
 
 file_path = os.path.join('Абсолютный', 'путь', 'до', 'создаваемого', 'файла.xls')
 wb.save(file_path)
