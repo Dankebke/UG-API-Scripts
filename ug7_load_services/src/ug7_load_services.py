@@ -42,7 +42,7 @@ for row in range(sheet1.nrows):
         try:
             server.v1.libraries.service.add(auth_token, service_structure)
         except xmlrpc.client.Fault as err:
-            if err.faultCode == 9:
+            if err.faultCode == 409:
                 server.v1.libraries.service.update(auth_token, dict_services[service_name], service_structure)
 
 server.v2.core.logout(auth_token)
