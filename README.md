@@ -5,5 +5,5 @@
 Все скрипты и инструкции по их использованию расположены в соответствующих вложенных папках.<br>
 
 Установка библиотек:
-1. sudo pip3 install xlrd --break-system-packages
-2. sudo pip3 install xlwt --break-system-packages
+1. sudo apt install python3-xlrd
+2. sudo apt install python3-xlwt
